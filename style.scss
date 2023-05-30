@@ -1,0 +1,160 @@
+@use "sass/forward" as *;
+// fuentes
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;800&display=swap");
+
+body {
+  font-family: Raleway;
+  position: relative;
+  font-size: clamp(1.2rem, 1vw, 1.4rem);
+  background: rgb(255, 255, 255);
+  overflow-x: hidden;
+  @include cel {
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 35%,
+      rgba(254, 208, 24, 1) 35%,
+      rgba(254, 208, 24, 1) 62%,
+      rgba(255, 255, 255, 1) 62%
+    );
+  }
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 21%,
+    rgba(254, 208, 24, 1) 21%,
+    rgba(254, 208, 24, 1) 42%,
+    rgba(255, 255, 255, 1) 42%
+  );
+}
+section,
+nav {
+  width: min(100% - 10rem, 50rem);
+  margin-inline: auto;
+  @include cel {
+    width: min(100% - 5rem, 50rem);
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+#imagenes {
+  text-align: center;
+  img:first-child {
+    max-width: 380px;
+    padding: 3rem 0;
+  }
+  img:last-child {
+    width: minmax(120px, 800px);
+    height: auto;
+  }
+}
+
+h1 {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: clamp(2rem, 2vw, 2.8rem);
+}
+#formu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+  margin-bottom: 4rem;
+  @include cel {
+    margin-bottom: 2rem;
+  }
+  input,
+  select {
+    flex: 1 0 100%;
+  }
+  #promos,
+  #curso {
+    flex: 1 0 49%;
+    @include cel {
+      flex: 1 0 100%;
+    }
+  }
+}
+input,
+select {
+  border: solid 1px #ccc;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+#contactoBtn {
+  display: inline-block;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  background: $naranja;
+  text-decoration: none;
+  color: #fff;
+}
+
+nav {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 4rem;
+    @include cel {
+      padding-bottom: 2rem;
+    }
+    li {
+      padding: 0.6rem 1rem;
+    }
+  }
+}
+#social {
+  margin-bottom: 4rem;
+  text-align: center;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    @include cel{
+   flex-wrap: wrap;
+    }
+  }
+
+
+  @include cel {
+    gap: 2rem;
+  }
+  img {
+    width: 30px;
+    @include cel {
+      width: 40px;
+    }
+  }
+  .cel {
+    border: solid 2px $naranja;
+    padding: 0.4rem 1rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    text-align: center;
+    img {
+      margin-bottom: -2px;
+      max-width: 15px;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #161616;
+  @extend .anima;
+  &:hover {
+    transform: scale(1.1);
+    @include cel {
+      transform: scale(1);
+    }
+  }
+}
+
+#msj {
+  flex: 1 0 100%;
+  text-align: center;
+}
