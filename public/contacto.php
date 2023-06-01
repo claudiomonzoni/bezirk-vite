@@ -9,6 +9,8 @@ $edo = $_POST['edo1'];
 $curso = $_POST['curso1'];
 $promos = $_POST['promos1'];
 $desde = "fervale.8a@gmail.com";
+// $desde = "claudiomonzoni@hotmail.com";
+$from = "esau@bezirk.mx";
 
 
 if(strlen($celular) === 10) {
@@ -18,7 +20,7 @@ $subject = "Contacto desde Landing page";
 $headers = 'MIME-Version: 1.0' . "\r\n";
 $headers .=  'Content-Type: text/html; charset=utf-8' . "\r\n";
 //$headers .= 'Content-Type: text/HTML; charset=ISO-8859-1' . "\r\n";
-$headers .= 'From:' . $desde. "\r\n"; // Sender's Email
+$headers .= 'From:' . $from. "\r\n"; // Sender's Email
 $headers .= 'Cc:' . "octabio@gmail.com". "\r\n"; // Carbon copy to Sender
 $template = '<div style="padding:50px; color:#000000;">
 Datos del sitio.<br/>'
