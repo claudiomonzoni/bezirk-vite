@@ -56,7 +56,7 @@ h1 {
   padding: 2rem 0;
   font-size: clamp(2rem, 2vw, 2.8rem);
 }
-#formu {
+#forma {
   display: flex;
   flex-wrap: wrap;
   gap: 1%;
@@ -157,4 +157,7 @@ a {
 #msj {
   flex: 1 0 100%;
   text-align: center;
+  padding: 1rem 0;
+  color: #cd171f;
+  font-weight: bold;
 }

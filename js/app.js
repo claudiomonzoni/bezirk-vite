@@ -108,10 +108,10 @@ $(function () {
         },
         function (data) {
           $("#msj").append(data); // Append returned message to message paragraph.
+          $("#forma")[0].reset(); // To reset form fields on success.
           if (
             data == "Gracias por tu registro, pronto un asesor se pondra en contacto contigo 😎"
           ) {
-            $("#formu").reset(); // To reset form fields on success.
           }
         }
       );
